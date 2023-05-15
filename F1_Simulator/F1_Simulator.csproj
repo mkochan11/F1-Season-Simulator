@@ -1,0 +1,359 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{BD69901A-58F9-474E-856E-39E607A33320}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>F1_Simulator</RootNamespace>
+    <AssemblyName>F1_Simulator</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Classes\AerodynamicPart.cs" />
+    <Compile Include="Classes\BudgetHistory.cs" />
+    <Compile Include="Classes\Car.cs" />
+    <Compile Include="Classes\Chassis.cs" />
+    <Compile Include="Classes\Controller.cs" />
+    <Compile Include="Classes\Driver.cs" />
+    <Compile Include="Classes\Engine.cs" />
+    <Compile Include="Classes\FrontWing.cs" />
+    <Compile Include="Classes\GPResults.cs" />
+    <Compile Include="Classes\GrandPrix.cs" />
+    <Compile Include="Classes\Player.cs" />
+    <Compile Include="Classes\RearWing.cs" />
+    <Compile Include="Classes\Season.cs" />
+    <Compile Include="Classes\Team.cs" />
+    <Compile Include="Classes\Circuit.cs" />
+    <Compile Include="Forms\BudgetHistoryScreen.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\BudgetHistoryScreen.Designer.cs">
+      <DependentUpon>BudgetHistoryScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\CalendarScreen.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\CalendarScreen.Designer.cs">
+      <DependentUpon>CalendarScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ConfigurationScreen.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\ConfigurationScreen.Designer.cs">
+      <DependentUpon>ConfigurationScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\DriversSelection.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\DriversSelection.Designer.cs">
+      <DependentUpon>DriversSelection.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\EnterNamesScreen.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\EnterNamesScreen.Designer.cs">
+      <DependentUpon>EnterNamesScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\GPDetailsScreen.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\GPDetailsScreen.Designer.cs">
+      <DependentUpon>GPDetailsScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\MainMenu.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\MainMenu.Designer.cs">
+      <DependentUpon>MainMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\MyTeam.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\MyTeam.Designer.cs">
+      <DependentUpon>MyTeam.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\StandingsScreen.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\StandingsScreen.Designer.cs">
+      <DependentUpon>StandingsScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Start.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Start.Designer.cs">
+      <DependentUpon>Start.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\UpgradeScreen.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\UpgradeScreen.Designer.cs">
+      <DependentUpon>UpgradeScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Forms\BudgetHistoryScreen.resx">
+      <DependentUpon>BudgetHistoryScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\CalendarScreen.resx">
+      <DependentUpon>CalendarScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ConfigurationScreen.resx">
+      <DependentUpon>ConfigurationScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\DriversSelection.resx">
+      <DependentUpon>DriversSelection.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\EnterNamesScreen.resx">
+      <DependentUpon>EnterNamesScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\GPDetailsScreen.resx">
+      <DependentUpon>GPDetailsScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MainMenu.resx">
+      <DependentUpon>MainMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MyTeam.resx">
+      <DependentUpon>MyTeam.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\StandingsScreen.resx">
+      <DependentUpon>StandingsScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Start.resx">
+      <DependentUpon>Start.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\UpgradeScreen.resx">
+      <DependentUpon>UpgradeScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="Properties\DataSources\F1_Simulator.Classes.BudgetHistory.datasource" />
+    <None Include="Properties\DataSources\F1_Simulator.Classes.Driver.datasource" />
+    <None Include="Properties\DataSources\F1_Simulator.Classes.Season.datasource" />
+    <None Include="Properties\DataSources\F1_Simulator.Classes.Team.datasource" />
+    <None Include="Properties\DataSources\F1_Simulator.Forms.StandingsScreen.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bg.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Images\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TR-front-wing-alfa-romeo-c42-1024x706.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\front_wing.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Bahrain.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\abu_dhabi.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\austria.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\baku.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\barcelona.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\brazil.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\canada.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cota.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hungary.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\imola.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\japan.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\jeddah.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\las_vegas.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Melbourne.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mexico.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\miami.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\monaco.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\monza.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\qatar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\silverstone.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\singapore.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\spa.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\zandvoort.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\austria_flag.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\austria_flag1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arabia_flag.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\australia_flag.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\azerbaijan_flag.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bahrain_flag.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\belgium_flag.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\brazil_flag.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\canada_flag.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hungary_flag.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\italy_flag.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\japan_flag.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mexico_flag.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\monaco_flag.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\netherlands_flag.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\qatar_flag.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\singapore_flag.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\spain_flag.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\uae_flag.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\uk_flag.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\usa_flag.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\start_line2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\start_line2_1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\start_line2_11.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\front_wing1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\front_wing_1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\front_wing.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\front_wing1.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
