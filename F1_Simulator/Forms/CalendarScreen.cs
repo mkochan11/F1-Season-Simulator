@@ -68,7 +68,7 @@ namespace F1_Simulator.Forms
         private void gpDetailsLabel_Click(object sender, EventArgs e)
         {
             int selectedGP = this.grandPrixsList.SelectedItems[0].Index;
-            this.Start.GPDetailsScreen_Load(selectedGP);
+            this.Start.GPDetailsScreen_Load(selectedGP, "calendar");
             this.Hide();
         }
 

@@ -42,6 +42,7 @@ namespace F1_Simulator.Forms
             this.budgetHistoryScreen1 = new F1_Simulator.Forms.BudgetHistoryScreen();
             this.calendarScreen1 = new F1_Simulator.Forms.CalendarScreen();
             this.gpDetailsScreen1 = new F1_Simulator.Forms.GPDetailsScreen();
+            this.nextRaceScreen1 = new F1_Simulator.Forms.NextRaceScreen();
             this.SuspendLayout();
             // 
             // startLabel
@@ -151,12 +152,22 @@ namespace F1_Simulator.Forms
             this.gpDetailsScreen1.Size = new System.Drawing.Size(888, 570);
             this.gpDetailsScreen1.TabIndex = 21;
             // 
+            // nextRaceScreen1
+            // 
+            this.nextRaceScreen1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("nextRaceScreen1.BackgroundImage")));
+            this.nextRaceScreen1.Location = new System.Drawing.Point(0, 0);
+            this.nextRaceScreen1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.nextRaceScreen1.Name = "nextRaceScreen1";
+            this.nextRaceScreen1.Size = new System.Drawing.Size(888, 570);
+            this.nextRaceScreen1.TabIndex = 22;
+            // 
             // Start
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::F1_Simulator.Properties.Resources.bg;
             this.ClientSize = new System.Drawing.Size(884, 571);
+            this.Controls.Add(this.nextRaceScreen1);
             this.Controls.Add(this.gpDetailsScreen1);
             this.Controls.Add(this.calendarScreen1);
             this.Controls.Add(this.budgetHistoryScreen1);
@@ -192,5 +203,6 @@ namespace F1_Simulator.Forms
         private BudgetHistoryScreen budgetHistoryScreen1;
         private CalendarScreen calendarScreen1;
         private GPDetailsScreen gpDetailsScreen1;
+        private NextRaceScreen nextRaceScreen1;
     }
 }

@@ -48,6 +48,14 @@ namespace F1_Simulator.Forms
         {
             calendarLabel.ForeColor = Color.Black;
         }
+        private void nextRaceLabel_MouseEnter(object sender, EventArgs e)
+        {
+            nextRaceLabel.ForeColor = Color.Firebrick;
+        }
+        private void nextRaceLabel_MouseLeave(object sender, EventArgs e)
+        {
+            nextRaceLabel.ForeColor = Color.Black;
+        }
 
         private void labelMyTeam_Click(object sender, EventArgs e)
         {
@@ -65,6 +73,12 @@ namespace F1_Simulator.Forms
         private void calendarLabel_Click(object sender, EventArgs e)
         {
             Start.CalendarScreen_Load();
+            this.Hide();
+        }
+
+        private void nextRaceLabel_Click(object sender, EventArgs e)
+        {
+            Start.NextRaceScreen_Load();
             this.Hide();
         }
     }

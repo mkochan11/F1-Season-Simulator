@@ -30,6 +30,7 @@ namespace F1_Simulator.Forms
             budgetHistoryScreen1.Visible = false;
             calendarScreen1.Visible = false;
             gpDetailsScreen1.Visible = false;
+            nextRaceScreen1.Visible = false;
 
             controller = new Controller();
            
@@ -96,10 +97,16 @@ namespace F1_Simulator.Forms
             calendarScreen1.Show();
         }
 
-        public void GPDetailsScreen_Load(int index)
+        public void GPDetailsScreen_Load(int index, string source)
         {
-            gpDetailsScreen1.Initialize(this, index);
+            gpDetailsScreen1.Initialize(this, index, source);
             gpDetailsScreen1.Show();
+        }
+
+        public void NextRaceScreen_Load()
+        {
+            nextRaceScreen1.Initialize(this);
+            nextRaceScreen1.Show();
         }
 
         private void startLabel_MouseLeave(object sender, EventArgs e)

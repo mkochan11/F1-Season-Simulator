@@ -118,6 +118,9 @@
             this.nextRaceLabel.Size = new System.Drawing.Size(151, 28);
             this.nextRaceLabel.TabIndex = 5;
             this.nextRaceLabel.Text = "> Next Race <";
+            this.nextRaceLabel.Click += new System.EventHandler(this.nextRaceLabel_Click);
+            this.nextRaceLabel.MouseEnter += new System.EventHandler(this.nextRaceLabel_MouseEnter);
+            this.nextRaceLabel.MouseLeave += new System.EventHandler(this.nextRaceLabel_MouseLeave);
             // 
             // MainMenu
             // 

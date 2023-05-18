@@ -19,3 +19,4 @@ E:\C#_projekty\F1_Simulator\F1_Simulator\obj\Debug\F1_Simulator.pdb
 E:\C#_projekty\F1_Simulator\F1_Simulator\obj\Debug\F1_Simulator.Forms.BudgetHistoryScreen.resources
 E:\C#_projekty\F1_Simulator\F1_Simulator\obj\Debug\F1_Simulator.Forms.CalendarScreen.resources
 E:\C#_projekty\F1_Simulator\F1_Simulator\obj\Debug\F1_Simulator.Forms.GPDetailsScreen.resources
+E:\C#_projekty\F1_Simulator\F1_Simulator\obj\Debug\F1_Simulator.Forms.NextRaceScreen.resources

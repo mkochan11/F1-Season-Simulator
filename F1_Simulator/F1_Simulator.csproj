@@ -109,6 +109,12 @@
     <Compile Include="Forms\MyTeam.Designer.cs">
       <DependentUpon>MyTeam.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\NextRaceScreen.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\NextRaceScreen.Designer.cs">
+      <DependentUpon>NextRaceScreen.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\StandingsScreen.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -152,6 +158,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\MyTeam.resx">
       <DependentUpon>MyTeam.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\NextRaceScreen.resx">
+      <DependentUpon>NextRaceScreen.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\StandingsScreen.resx">
       <DependentUpon>StandingsScreen.cs</DependentUpon>

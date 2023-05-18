@@ -31,7 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GPDetailsScreen));
             this.titleLabel = new System.Windows.Forms.Label();
             this.circuitLayoutImage = new System.Windows.Forms.PictureBox();
-            this.backLabel = new System.Windows.Forms.Label();
+            this.backCalendarLabel = new System.Windows.Forms.Label();
             this.flagImage = new System.Windows.Forms.PictureBox();
             this.circuitNameLabel = new System.Windows.Forms.Label();
             this.circuitName = new System.Windows.Forms.Label();
@@ -54,6 +54,7 @@
             this.GPRaceWeek = new System.Windows.Forms.Label();
             this.GPLapsLabel = new System.Windows.Forms.Label();
             this.GPLaps = new System.Windows.Forms.Label();
+            this.backNextRaceLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.circuitLayoutImage)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.flagImage)).BeginInit();
             this.SuspendLayout();
@@ -79,21 +80,21 @@
             this.circuitLayoutImage.TabIndex = 4;
             this.circuitLayoutImage.TabStop = false;
             // 
-            // backLabel
+            // backCalendarLabel
             // 
-            this.backLabel.AutoSize = true;
-            this.backLabel.BackColor = System.Drawing.Color.Transparent;
-            this.backLabel.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.backLabel.Font = new System.Drawing.Font("PenultimateLightItal", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.backLabel.ForeColor = System.Drawing.Color.Black;
-            this.backLabel.Location = new System.Drawing.Point(11, 391);
-            this.backLabel.Name = "backLabel";
-            this.backLabel.Size = new System.Drawing.Size(101, 50);
-            this.backLabel.TabIndex = 13;
-            this.backLabel.Text = "< Back to\r\n Calendar";
-            this.backLabel.Click += new System.EventHandler(this.backLabel_Click);
-            this.backLabel.MouseEnter += new System.EventHandler(this.backLabel_MouseEnter);
-            this.backLabel.MouseLeave += new System.EventHandler(this.backLabel_MouseLeave);
+            this.backCalendarLabel.AutoSize = true;
+            this.backCalendarLabel.BackColor = System.Drawing.Color.Transparent;
+            this.backCalendarLabel.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.backCalendarLabel.Font = new System.Drawing.Font("PenultimateLightItal", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.backCalendarLabel.ForeColor = System.Drawing.Color.Black;
+            this.backCalendarLabel.Location = new System.Drawing.Point(11, 391);
+            this.backCalendarLabel.Name = "backCalendarLabel";
+            this.backCalendarLabel.Size = new System.Drawing.Size(101, 50);
+            this.backCalendarLabel.TabIndex = 13;
+            this.backCalendarLabel.Text = "< Back to\r\n Calendar";
+            this.backCalendarLabel.Click += new System.EventHandler(this.backCalendarLabel_Click);
+            this.backCalendarLabel.MouseEnter += new System.EventHandler(this.backCalendarLabel_MouseEnter);
+            this.backCalendarLabel.MouseLeave += new System.EventHandler(this.backCalendarLabel_MouseLeave);
             // 
             // flagImage
             // 
@@ -378,11 +379,28 @@
             this.GPLaps.TabIndex = 36;
             this.GPLaps.Text = "Lp";
             // 
+            // backNextRaceLabel
+            // 
+            this.backNextRaceLabel.AutoSize = true;
+            this.backNextRaceLabel.BackColor = System.Drawing.Color.Transparent;
+            this.backNextRaceLabel.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.backNextRaceLabel.Font = new System.Drawing.Font("PenultimateLightItal", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.backNextRaceLabel.ForeColor = System.Drawing.Color.Black;
+            this.backNextRaceLabel.Location = new System.Drawing.Point(15, 402);
+            this.backNextRaceLabel.Name = "backNextRaceLabel";
+            this.backNextRaceLabel.Size = new System.Drawing.Size(83, 28);
+            this.backNextRaceLabel.TabIndex = 37;
+            this.backNextRaceLabel.Text = "< Back";
+            this.backNextRaceLabel.Click += new System.EventHandler(this.backNextRaceLabel_Click);
+            this.backNextRaceLabel.MouseEnter += new System.EventHandler(this.backNextRaceLabel_MouseEnter);
+            this.backNextRaceLabel.MouseLeave += new System.EventHandler(this.backNextRaceLabel_MouseLeave);
+            // 
             // GPDetailsScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.Controls.Add(this.backNextRaceLabel);
             this.Controls.Add(this.GPLaps);
             this.Controls.Add(this.GPLapsLabel);
             this.Controls.Add(this.GPRaceWeek);
@@ -405,7 +423,7 @@
             this.Controls.Add(this.circuitName);
             this.Controls.Add(this.circuitNameLabel);
             this.Controls.Add(this.flagImage);
-            this.Controls.Add(this.backLabel);
+            this.Controls.Add(this.backCalendarLabel);
             this.Controls.Add(this.circuitLayoutImage);
             this.Controls.Add(this.titleLabel);
             this.Name = "GPDetailsScreen";
@@ -421,7 +439,7 @@
 
         private System.Windows.Forms.Label titleLabel;
         public System.Windows.Forms.PictureBox circuitLayoutImage;
-        private System.Windows.Forms.Label backLabel;
+        private System.Windows.Forms.Label backCalendarLabel;
         private System.Windows.Forms.PictureBox flagImage;
         private System.Windows.Forms.Label circuitNameLabel;
         private System.Windows.Forms.Label circuitName;
@@ -444,5 +462,6 @@
         private System.Windows.Forms.Label GPRaceWeek;
         private System.Windows.Forms.Label GPLapsLabel;
         private System.Windows.Forms.Label GPLaps;
+        private System.Windows.Forms.Label backNextRaceLabel;
     }
 }

@@ -20,10 +20,19 @@ namespace F1_Simulator.Forms
             InitializeComponent();
         }
 
-        public void Initialize(Start start, int index)
+        public void Initialize(Start start, int index, string source)
         {
             this.Index = index;
             this.Start = start;
+            this.backCalendarLabel.Hide();
+            this.backNextRaceLabel.Hide();
+            if (source == "calendar") {
+                backCalendarLabel.Show();
+            }
+            else if(source == "nextRace")
+            {
+                backNextRaceLabel.Show();
+            }
             this.circuitLayoutImage.Image = Start.GetGrandPrixesList()[Index].Circuit.Layout;
             this.titleLabel.Text = Start.GetGrandPrixesList()[Index].Name + " Details";
             this.flagImage.Image = Start.GetGrandPrixesList()[Index].Flag;
@@ -58,7 +67,7 @@ namespace F1_Simulator.Forms
 
         }
 
-        private void backLabel_Click(object sender, EventArgs e)
+        private void backCalendarLabel_Click(object sender, EventArgs e)
         {
             this.Start.CalendarScreen_Load();
             this.Hide();
@@ -79,13 +88,43 @@ namespace F1_Simulator.Forms
                 this.titleLabel.Location = new Point(this.titleLabel.Location.X + 25, this.Location.Y);
             }
         }
-        private void backLabel_MouseEnter(object sender, EventArgs e)
+        private void backCalendarLabel_MouseEnter(object sender, EventArgs e)
         {
-            this.backLabel.ForeColor = Color.Firebrick;
+            this.backCalendarLabel.ForeColor = Color.Firebrick;
         }
-        private void backLabel_MouseLeave(object sender, EventArgs e)
+        private void backCalendarLabel_MouseLeave(object sender, EventArgs e)
         {
-            this.backLabel.ForeColor = Color.Black;
+            this.backCalendarLabel.ForeColor = Color.Black;
+        }
+
+        private void backNextRaceLabel_Click(object sender, EventArgs e)
+        {
+            this.Start.NextRaceScreen_Load();
+            this.Hide();
+            if (Start.GetGrandPrixesList()[Index].Name == "Gran Premio de la Ciudad de Mexico")
+            {
+                this.titleLabel.Location = new Point(this.titleLabel.Location.X + 100, this.Location.Y);
+            }
+            if (Start.GetGrandPrixesList()[Index].Name == "Grande Premio de Sao Paulo" || Start.GetGrandPrixesList()[Index].Name == "Grosses Preis von Osterreich")
+            {
+                this.titleLabel.Location = new Point(this.titleLabel.Location.X + 75, this.Location.Y);
+            }
+            if (Start.GetGrandPrixesList()[Index].Name == "Gran Premio Emilia-Romagna")
+            {
+                this.titleLabel.Location = new Point(this.titleLabel.Location.X + 50, this.Location.Y);
+            }
+            if (Start.GetGrandPrixesList()[Index].Name == "Saudi Arabian Grand Prix")
+            {
+                this.titleLabel.Location = new Point(this.titleLabel.Location.X + 25, this.Location.Y);
+            }
+        }
+        private void backNextRaceLabel_MouseEnter(object sender, EventArgs e)
+        {
+            this.backNextRaceLabel.ForeColor = Color.Firebrick;
+        }
+        private void backNextRaceLabel_MouseLeave(object sender, EventArgs e)
+        {
+            this.backNextRaceLabel.ForeColor = Color.Black;
         }
     }
 }
